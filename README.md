@@ -1,4 +1,5 @@
 # file-uploader
+![CI](https://github.com/FerrowAI/file-uploader/actions/workflows/ci.yml/badge.svg)
 
 A storage-agnostic upload pipeline: you give it a `Buffer` and a filename, it
 validates the content, dedups by hash if you want, generates a safe unique

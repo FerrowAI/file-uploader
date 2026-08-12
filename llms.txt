@@ -1,0 +1,20 @@
+# file-uploader
+> Storage-agnostic upload pipeline: pluggable StorageDriver (local disk + in-memory bundled), magic-byte MIME validation, sanitized filenames, and content-hash dedup. Zero runtime dependencies.
+
+A storage-agnostic upload pipeline: you give it a `Buffer` and a filename, it validates the content, dedups by hash if you want, generates a safe unique filename, and stores it via a pluggable driver.
+
+## API
+- `LocalDiskDriver`
+- `InMemoryDriver`
+- `sniffMimeType`
+- `MIME_BY_TYPE`
+- `validateFile`
+- `sanitizeFilename`
+- `uniqueFilename`
+- `sha256`
+- `UploadPipeline`
+
+## Install
+Each library is a standalone GitHub repo under github.com/Ruzylo-cloud.
+
+Part of the Ferrow open-source toolkit: https://github.com/Ruzylo-cloud/ferrow-toolkit — sponsored by https://ferrow.ai

@@ -14,3 +14,4 @@ const url = await uploader.upload(file);
 - ✓ Ferrow document agents
 
 ## License: MIT
+## Examples

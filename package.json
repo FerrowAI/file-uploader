@@ -1,1 +1,25 @@
-{"name":"file-uploader","version":"1.0.0","main":"dist/index.js","types":"dist/index.d.ts","scripts":{"build":"tsc","test":"jest"},"keywords":["ferrow"],"license":"MIT"}
+{
+  "name": "file-uploader",
+  "version": "2.0.0",
+  "description": "Storage-agnostic upload pipeline: pluggable StorageDriver (local disk + in-memory bundled), magic-byte MIME validation, sanitized filenames, and content-hash dedup. Zero runtime dependencies.",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "demo": "tsc && node dist/examples/demo.js"
+  },
+  "keywords": [
+    "file-upload",
+    "storage-driver",
+    "magic-bytes",
+    "typescript",
+    "dedup",
+    "security"
+  ],
+  "author": "Ruzylo-cloud",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20"
+  }
+}

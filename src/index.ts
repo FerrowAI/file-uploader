@@ -1,12 +1,11 @@
-export class FileUploader {
-  private storage: 's3' | 'local';
-  constructor(options: { storage: string }) { this.storage = options.storage as any; }
-  
-  async upload(file: { name: string; data: Buffer }): Promise<string> {
-    if (this.storage === 's3') {
-      return `https://s3.amazonaws.com/bucket/${file.name}`;
-    } else {
-      return `/uploads/${file.name}`;
-    }
-  }
-}
+export type { StorageDriver } from './types';
+export { LocalDiskDriver } from './drivers/localDisk';
+export { InMemoryDriver } from './drivers/inMemory';
+export { sniffMimeType, MIME_BY_TYPE } from './sniff';
+export type { SniffedType } from './sniff';
+export { validateFile } from './validate';
+export type { ValidationOptions, ValidationResult } from './validate';
+export { sanitizeFilename, uniqueFilename } from './filename';
+export { sha256 } from './hash';
+export { UploadPipeline } from './pipeline';
+export type { UploadOptions, UploadResult } from './pipeline';
